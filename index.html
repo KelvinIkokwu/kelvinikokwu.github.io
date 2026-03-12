@@ -1,178 +1,385 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Kachi Kelvin Ikokwu | Data Analytics Portfolio</title>
 
-<!-- basicLightbox CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.css">
 
 <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f5f7; color: #333; line-height: 1.6; }
-    header { background: #0b3d91; color: white; padding: 50px 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 2.8em; }
-    header p { margin-top: 10px; font-size: 1.2em; font-weight: 300; }
 
-    section { padding: 40px 20px; max-width: 1100px; margin: auto; }
-    h2 { color: #0b3d91; margin-bottom: 20px; font-size: 2em; }
+body{
+font-family:Arial, sans-serif;
+margin:0;
+background:#f4f6f9;
+color:#333;
+line-height:1.6;
+}
 
-    /* Skills */
-    .skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
-    .skill { background: #0b3d91; color: white; padding: 8px 15px; border-radius: 25px; font-weight: bold; font-size: 0.9em; }
+nav{
+background:#0b3d91;
+padding:15px 30px;
+position:sticky;
+top:0;
+z-index:100;
+}
 
-    /* Project sections */
-    .project-section { padding: 20px; border-radius: 10px; margin-bottom: 40px; }
-    .project-demo { background: #e6f0ff; } /* soft blue */
-    .project-live { background: #e6ffe6; } /* soft green */
-    .project h3 { color: #0b3d91; margin-top: 0; }
+nav a{
+color:white;
+margin-right:25px;
+text-decoration:none;
+font-weight:bold;
+}
 
-    /* Screenshot grid */
-    .screenshot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
-    .screenshot-grid img:first-child { grid-column: span 2; } /* first screenshot full width */
-    .screenshot-grid img { width: 100%; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
-    .screenshot-grid img:hover { transform: scale(1.03); }
+nav a:hover{
+text-decoration:underline;
+}
 
-    /* Power BI iframe */
-    .iframe-container { position: relative; width: 100%; padding-bottom: 56.25%; margin-top: 20px; }
-    .iframe-container iframe { position: absolute; width: 100%; height: 100%; border: none; border-radius: 10px; }
+header{
+background:#0b3d91;
+color:white;
+padding:60px 20px;
+text-align:center;
+}
 
-    /* Key insights */
-    .key-insights { background: #ffffff; border-left: 5px solid #0b3d91; padding: 10px 15px; margin-top: 15px; border-radius: 5px; }
-    .key-insights ul { margin: 0; padding-left: 20px; }
+header h1{
+margin:0;
+font-size:2.8em;
+}
 
-    a { color: #0b3d91; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+header p{
+font-size:1.2em;
+margin-top:10px;
+}
 
-    footer { background: #0b3d91; color: white; text-align: center; padding: 20px; margin-top: 50px; font-size: 0.9em; }
+section{
+max-width:1100px;
+margin:auto;
+padding:50px 20px;
+}
 
-    @media (max-width: 700px) {
-        .screenshot-grid { grid-template-columns: 1fr; }
-        header h1 { font-size: 2em; }
-        section { padding: 30px 15px; }
-    }
+h2{
+color:#0b3d91;
+margin-bottom:20px;
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.skill-card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+.skill-card h3{
+margin-top:0;
+color:#0b3d91;
+}
+
+.project-box{
+padding:25px;
+border-radius:12px;
+margin-bottom:50px;
+}
+
+.demo{
+background:#e8f0ff;
+}
+
+.live{
+background:#e9ffe9;
+}
+
+.screenshot-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:20px;
+}
+
+.screenshot-grid img:first-child{
+grid-column:span 2;
+}
+
+.screenshot-grid img{
+width:100%;
+border-radius:8px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.screenshot-grid img:hover{
+transform:scale(1.03);
+}
+
+iframe{
+width:100%;
+height:500px;
+border:none;
+border-radius:10px;
+margin-top:20px;
+}
+
+.key-insights{
+background:white;
+padding:15px;
+margin-top:20px;
+border-left:4px solid #0b3d91;
+border-radius:5px;
+}
+
+footer{
+background:#0b3d91;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:50px;
+}
+
+a{
+color:#0b3d91;
+}
+
 </style>
+
 </head>
+
 <body>
 
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
 <header>
-    <h1>Kachi Kelvin Ikokwu</h1>
-    <p>Data Analytics & Power BI Portfolio – Healthcare & Community Care Insights</p>
+
+<h1>Kachi Kelvin Ikokwu</h1>
+
+<p><strong>Healthcare Data Analyst | Power BI Specialist | Operational Analytics</strong></p>
+
+<p>Transforming healthcare and community care data into actionable operational insights.</p>
+
 </header>
 
-<!-- BIO -->
-<section id="bio">
-    <h2>About Me</h2>
-    <p>
-        I am Kachi Kelvin Ikokwu, a Data Analyst specializing in healthcare and community care analytics.
-        I create interactive dashboards and reports to help organizations make data-driven decisions,
-        monitor client satisfaction, and improve operational efficiency.
-        This portfolio showcases both demo dashboards and live analytics projects I have developed for internal operations.
-    </p>
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+
+I am a Data Analyst specialising in healthcare and operational analytics, with experience building Power BI dashboards that support decision-making across community care services. My work focuses on transforming complex operational data into clear visual insights that improve service delivery, workforce planning, and patient outcomes.
+
+</p>
+
+<p>
+
+I have developed analytics solutions covering reablement services, discharge support programmes, care capacity monitoring, KPI performance tracking, and client satisfaction reporting. Through interactive dashboards and data modelling, I help organisations monitor service performance, identify operational risks, and make informed strategic decisions.
+
+</p>
+
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-        <div class="skill">Power BI</div>
-        <div class="skill">DAX</div>
-        <div class="skill">Data Modelling</div>
-        <div class="skill">Healthcare Analytics</div>
-        <div class="skill">Operational Dashboards</div>
-        <div class="skill">Data Visualization</div>
-    </div>
-</section>
 
-<!-- PROJECTS -->
+<h2>Key Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<h3>Data Analytics & Business Intelligence</h3>
+<p>Power BI, Data Modelling, KPI Monitoring, Dashboard Design, Data Visualisation, Performance Analytics</p>
+</div>
+
+<div class="skill-card">
+<h3>Data Engineering</h3>
+<p>SQL, ETL Processes, Data Extraction & Transformation, Data Cleansing, Data Quality Assurance</p>
+</div>
+
+<div class="skill-card">
+<h3>Healthcare Analytics</h3>
+<p>Reablement & Discharge Analytics, Patient Flow Analysis, Care Capacity Planning, Operational Reporting</p>
+</div>
+
+<div class="skill-card">
+<h3>Stakeholder Engagement</h3>
+<p>Cross-functional Collaboration, Training Staff, Presenting Insights to Non-Technical Stakeholders</p>
+</div>
+
+<div class="skill-card">
+<h3>Governance & Compliance</h3>
+<p>Data Confidentiality, Information Governance, Regulatory Compliance</p>
+</div>
+
+</div>
+
+</section>
 
 <section id="projects">
-    <h2>Projects</h2>
 
-    <!-- DEMO DASHBOARD -->
-    <div class="project-section project-demo">
-        <h3>Community Care & Bridging Services Dashboard (Demo)</h3>
-        <p>This Power BI dashboard demonstrates insights into care capacity, client satisfaction, complaints monitoring, revenue performance, and workforce analytics.</p>
+<h2>Projects</h2>
 
-        <div class="screenshot-grid">
-            <img src="screenshots/demo/care-call-compliance-client-satisfaction.png" alt="Care Call Compliance & Client Satisfaction">
-            <img src="screenshots/demo/client-complaint-analysis.png" alt="Client Complaint Analysis">
-            <img src="screenshots/demo/client-data-summary.png" alt="Client Data Summary">
-            <img src="screenshots/demo/client-medical-analysis.png" alt="Client Medical Analysis">
-            <img src="screenshots/demo/day-to-day-performance-tracker.png" alt="Day to Day Performance Tracker">
-            <img src="screenshots/demo/financial-analysis.png" alt="Financial Analysis">
-        </div>
+<div class="project-box demo">
 
-        <h4>Interactive Dashboard</h4>
-        <div class="iframe-container">
-            <iframe src="https://app.powerbi.com/view?r=eyJrIjoiOWE1ODk4MjMtMzliOS00OWZkLWIzNmEtMTkwNWNkYzc1ZGZkIiwidCI6IjgzZDFhNmMzLTM0MmYtNDkzMS1hZTE4LWFjMzZkZTlkM2ZmYSJ9" allowfullscreen></iframe>
-        </div>
+<h3>Community Care & Bridging Services Dashboard (Demo)</h3>
 
-        <div class="key-insights">
-            <h4>Key Insights</h4>
-            <ul>
-                <li>Percentage of satisfaction by category shows overall client happiness.</li>
-                <li>Number of care visits by day helps plan workforce schedules and leave.</li>
-                <li>Complaints by care assistants identify staff needing support or training.</li>
-                <li>Revenue analysis by client and area highlights high-value segments.</li>
-                <li>Care visit compliance rating ensures service standards are met consistently.</li>
-            </ul>
-        </div>
-    </div>
+<p>This Power BI dashboard demonstrates operational insights across care delivery including client satisfaction, complaint monitoring, workforce performance, and revenue analysis.</p>
 
-    <!-- LIVE REABLEMENT DASHBOARD -->
-    <div class="project-section project-live">
-        <h3>Healthcare Reablement Analytics (Live Project)</h3>
-        <p>This live dashboard monitors reablement service performance, tracks client goals, measures care duration and service hours, and analyzes referral response times. Sensitive client data has been blurred in screenshots for privacy.</p>
+<div class="screenshot-grid">
 
-        <div class="screenshot-grid">
-            <img src="screenshots/reablement/care-times-analysis.png" alt="Care Times Analysis per Service User">
-            <img src="screenshots/reablement/dashboard-overview.png" alt="Dashboard Overview">
-            <img src="screenshots/reablement/kpi-tracker.png" alt="KPI Tracker">
-            <img src="screenshots/reablement/reablement-data-metrics.png" alt="Reablement Data Metrics">
-            <img src="screenshots/reablement/reablement-duration-analysis.png" alt="Reablement Duration Analysis">
-            <img src="screenshots/reablement/reablement-goals-analysis.png" alt="Reablement Goals Analysis">
-            <img src="screenshots/reablement/reablement-referral-response.png" alt="Reablement Referral Response Rating">
-        </div>
+<img src="screenshots/demo/care-call-compliance-client-satisfaction.png">
 
-        <div class="key-insights">
-            <h4>Key Insights</h4>
-            <ul>
-                <li>Tracks individual client goals and overall achievement percentages.</li>
-                <li>Analyzes planned vs actual service hours and weekly care performance.</li>
-                <li>Monitors referral response times to ensure timely service delivery.</li>
-                <li>Highlights duration on reablement service for operational planning.</li>
-                <li>KPI tracker identifies trends and areas for improvement in service delivery.</li>
-            </ul>
-        </div>
-    </div>
+<img src="screenshots/demo/client-complaint-analysis.png">
+
+<img src="screenshots/demo/client-data-summary.png">
+
+<img src="screenshots/demo/client-medical-analysis.png">
+
+<img src="screenshots/demo/day-to-day-performance-tracker.png">
+
+<img src="screenshots/demo/financial-analysis.png">
+
+</div>
+
+<h4>Interactive Dashboard</h4>
+
+<iframe src="https://app.powerbi.com/view?r=eyJrIjoiOWE1ODk4MjMtMzliOS00OWZkLWIzNmEtMTkwNWNkYzc1ZGZkIiwidCI6IjgzZDFhNmMzLTM0MmYtNDkzMS1hZTE4LWFjMzZkZTlkM2ZmYSJ9"></iframe>
+
+<div class="key-insights">
+
+<h4>Key Insights</h4>
+
+<ul>
+
+<li>Care visit compliance monitoring across service users</li>
+
+<li>Client satisfaction ratings and complaint trends</li>
+
+<li>Workforce performance tracking and daily service activity</li>
+
+<li>Revenue contribution analysis across care clients</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="project-box live">
+
+<h3>Healthcare Reablement Analytics (Live Project)</h3>
+
+<p>
+
+This dashboard supports operational management of reablement services, monitoring referral response times, client goal progress, care duration, and service delivery performance. Sensitive client information has been anonymised.
+
+</p>
+
+<div class="screenshot-grid">
+
+<img src="screenshots/reablement/care-times-analysis.png">
+
+<img src="screenshots/reablement/dashboard-overview.png">
+
+<img src="screenshots/reablement/kpi-tracker.png">
+
+<img src="screenshots/reablement/reablement-data-metrics.png">
+
+<img src="screenshots/reablement/reablement-duration-analysis.png">
+
+<img src="screenshots/reablement/reablement-goals-analysis.png">
+
+<img src="screenshots/reablement/reablement-referral-response.png">
+
+</div>
+
+<div class="key-insights">
+
+<h4>Key Insights</h4>
+
+<ul>
+
+<li>Tracking individual client recovery goals and progress</li>
+
+<li>Measuring planned vs actual care service hours</li>
+
+<li>Monitoring referral response times for hospital discharge cases</li>
+
+<li>Analysing reablement service duration and operational efficiency</li>
+
+</ul>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
-    <h2>Contact</h2>
-    <p>
-        LinkedIn: <a href="https://www.linkedin.com/in/kelvin-ikokwu-43b6aa230/" target="_blank">https://www.linkedin.com/in/kelvin-ikokwu-43b6aa230/</a><br>
-        Email: <a href="mailto:kelvinlucas4real2001@gmail.com">kelvinlucas4real2001@gmail.com</a><br>
-        GitHub: <a href="https://github.com/KelvinIkokwu" target="_blank">https://github.com/KelvinIkokwu</a>
-    </p>
+
+<h2>Contact</h2>
+
+<p>
+
+LinkedIn  
+<br>
+<a href="https://www.linkedin.com/in/kelvin-ikokwu-43b6aa230/" target="_blank">
+linkedin.com/in/kelvin-ikokwu-43b6aa230
+</a>
+
+</p>
+
+<p>
+
+Email  
+<br>
+<a href="mailto:kelvinlucas4real2001@gmail.com">
+kelvinlucas4real2001@gmail.com
+</a>
+
+</p>
+
+<p>
+
+GitHub  
+<br>
+<a href="https://github.com/KelvinIkokwu" target="_blank">
+github.com/KelvinIkokwu
+</a>
+
+</p>
+
 </section>
 
 <footer>
-    &copy; 2026 Kachi Kelvin Ikokwu – Data Analytics Portfolio
+
+© 2026 Kachi Kelvin Ikokwu | Data Analytics Portfolio
+
 </footer>
 
-<!-- basicLightbox JS -->
 <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.js"></script>
+
 <script>
-    // Attach lightbox to all images in screenshot grids
-    document.querySelectorAll('.screenshot-grid img').forEach(img => {
-        img.addEventListener('click', () => {
-            basicLightbox.create(`<img src="${img.src}" style="width:100%;height:auto;">`).show()
-        })
-    });
+
+document.querySelectorAll('.screenshot-grid img').forEach(img=>{
+img.onclick=()=>{
+basicLightbox.create(`<img src="${img.src}" style="width:100%">`).show()
+}
+})
+
 </script>
 
 </body>
 </html>
+```
