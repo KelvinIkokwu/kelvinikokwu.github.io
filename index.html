@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,6 +60,17 @@ font-size:1.2em;
 margin-top:10px;
 }
 
+.header-button{
+background:#ff9800; 
+color:white; 
+padding:12px 25px; 
+border-radius:6px; 
+text-decoration:none; 
+font-weight:bold; 
+display:inline-block; 
+margin-top:15px;
+}
+
 /* GENERAL SECTIONS */
 
 section{
@@ -74,7 +84,7 @@ color:#0b3d91;
 margin-bottom:20px;
 }
 
-/* TOOLKIT / SKILLS */
+/* KEY SKILLS */
 
 .skills-grid{
 display:grid;
@@ -178,6 +188,15 @@ text-transform:uppercase;
 margin-bottom:10px;
 }
 
+/* SKILLS VISUAL TILE */
+
+#skills-visual img{
+width:350px; 
+border-radius:8px; 
+box-shadow:0 3px 8px rgba(0,0,0,0.12); 
+cursor:pointer;
+}
+
 /* FOOTER */
 
 footer{
@@ -200,7 +219,7 @@ color:#0b3d91;
 
 <nav>
 <a href="#about">About</a>
-<a href="#skills">Toolkit</a>
+<a href="#skills">Key Skills</a>
 <a href="#impact">Healthcare Impact</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
@@ -214,6 +233,13 @@ color:#0b3d91;
 
 <p>Transforming healthcare and operational data into actionable insights that support NHS-aligned service delivery.</p>
 
+<!-- Downloadable CV button -->
+<p>
+<a href="Kachi_Kelvin_Ikokwu_NHS_Data_Analyst_CV.pdf" download class="header-button">
+Download My NHS Data Analyst CV
+</a>
+</p>
+
 </header>
 
 <section id="about">
@@ -221,34 +247,26 @@ color:#0b3d91;
 <h2>About Me</h2>
 
 <p>
-
 I am a <strong>Healthcare Business Intelligence Analyst</strong> specialising in operational analytics for NHS-aligned services including reablement, enhanced discharge coordination, and community care performance monitoring.
-
 </p>
 
 <p>
-
 My work focuses on building analytics solutions that help healthcare organisations monitor service delivery, track patient outcomes, and improve operational decision-making. I design and develop <strong>Power BI dashboards, SQL reporting pipelines, and ETL data models</strong> that transform complex operational datasets into clear and actionable insights.
-
 </p>
 
 <p>
-
 I collaborate with multidisciplinary teams across clinical, operational, and social care environments to translate healthcare data into meaningful performance indicators supporting <strong>service improvement, governance, and regulatory reporting</strong>.
-
 </p>
 
 <p>
-
 Through my work with <strong>NHS-aligned reablement and discharge services</strong>, I have developed a strong understanding of patient pathways, integrated care systems, and the operational pressures surrounding hospital discharge and community care delivery.
-
 </p>
 
 </section>
 
 <section id="skills">
 
-<h2>KEY SKILLS</h2>
+<h2>Key Skills</h2>
 
 <div class="skills-grid">
 
@@ -279,6 +297,13 @@ Through my work with <strong>NHS-aligned reablement and discharge services</stro
 
 </div>
 
+</section>
+
+<!-- Mini skills tile section -->
+<section id="skills-visual">
+<h2>Skills Visualisation</h2>
+<p>A snapshot of my core analytics and NHS-aligned capabilities.</p>
+<img src="screenshots/skills-tile.png" onclick="basicLightbox.create('<img src=\'screenshots/skills-tile.png\' style=\'width:100%\'>').show()">
 </section>
 
 <section id="impact">
@@ -445,8 +470,13 @@ basicLightbox.create(`<img src="${img.src}" style="width:100%">`).show()
 }
 })
 
+document.querySelectorAll('#skills-visual img').forEach(img=>{
+img.onclick=()=>{
+basicLightbox.create(`<img src="${img.src}" style="width:100%">`).show()
+}
+})
+
 </script>
 
 </body>
 </html>
-```
