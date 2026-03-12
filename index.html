@@ -21,7 +21,7 @@ color:#333;
 line-height:1.6;
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 
 nav{
 background:#0b3d91;
@@ -61,7 +61,7 @@ font-size:1.2em;
 margin-top:10px;
 }
 
-/* SECTION */
+/* GENERAL SECTIONS */
 
 section{
 max-width:1100px;
@@ -74,7 +74,7 @@ color:#0b3d91;
 margin-bottom:20px;
 }
 
-/* SKILLS */
+/* TOOLKIT / SKILLS */
 
 .skills-grid{
 display:grid;
@@ -97,9 +97,9 @@ color:#0b3d91;
 /* IMPACT */
 
 .impact-box{
-background:#ffffff;
+background:white;
 border-left:5px solid #0b3d91;
-padding:20px;
+padding:18px;
 border-radius:6px;
 margin-bottom:15px;
 }
@@ -119,6 +119,23 @@ background:#e8f0ff;
 .live{
 background:#e9ffe9;
 }
+
+/* CASE STUDY */
+
+.case-study{
+background:white;
+padding:18px;
+border-radius:8px;
+margin-top:20px;
+box-shadow:0 3px 8px rgba(0,0,0,0.08);
+}
+
+.case-study h4{
+margin-top:0;
+color:#0b3d91;
+}
+
+/* SCREENSHOTS */
 
 .screenshot-grid{
 display:grid;
@@ -142,6 +159,8 @@ transition:0.2s;
 transform:scale(1.03);
 }
 
+/* DASHBOARD */
+
 iframe{
 width:100%;
 height:500px;
@@ -150,7 +169,16 @@ border-radius:10px;
 margin-top:20px;
 }
 
-/* CONTACT */
+.dashboard-note{
+background:#fff3cd;
+padding:12px;
+border-radius:6px;
+font-weight:bold;
+text-transform:uppercase;
+margin-bottom:10px;
+}
+
+/* FOOTER */
 
 footer{
 background:#0b3d91;
@@ -172,7 +200,7 @@ color:#0b3d91;
 
 <nav>
 <a href="#about">About</a>
-<a href="#skills">Skills</a>
+<a href="#skills">Toolkit</a>
 <a href="#impact">Healthcare Impact</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
@@ -206,13 +234,13 @@ My work focuses on building analytics solutions that help healthcare organisatio
 
 <p>
 
-I collaborate with multidisciplinary teams across clinical, operational, and social care environments to translate healthcare data into meaningful indicators that support <strong>service improvement, governance, and regulatory reporting</strong>.
+I collaborate with multidisciplinary teams across clinical, operational, and social care environments to translate healthcare data into meaningful performance indicators supporting <strong>service improvement, governance, and regulatory reporting</strong>.
 
 </p>
 
 <p>
 
-Through my work with <strong>NHS-aligned reablement and discharge services</strong>, I have developed a strong understanding of patient pathways, integrated care systems, and the operational pressures surrounding hospital discharge, service capacity planning, and community care delivery.
+Through my work with <strong>NHS-aligned reablement and discharge services</strong>, I have developed a strong understanding of patient pathways, integrated care systems, and the operational pressures surrounding hospital discharge and community care delivery.
 
 </p>
 
@@ -220,7 +248,7 @@ Through my work with <strong>NHS-aligned reablement and discharge services</stro
 
 <section id="skills">
 
-<h2>Key Skills</h2>
+<h2>NHS Data Analytics Toolkit</h2>
 
 <div class="skills-grid">
 
@@ -231,22 +259,22 @@ Through my work with <strong>NHS-aligned reablement and discharge services</stro
 
 <div class="skill-card">
 <h3>Data Engineering</h3>
-<p>SQL, ETL Processes, Data Extraction & Transformation, Data Cleansing, Data Quality Assurance</p>
+<p>SQL, ETL Pipelines, Data Extraction & Transformation, Data Cleansing, Data Quality Assurance</p>
 </div>
 
 <div class="skill-card">
 <h3>Healthcare & NHS Service Analytics</h3>
-<p>Reablement & Discharge Analytics, Patient Pathway Analysis, Integrated Care Systems, Care Capacity Planning, Operational Performance Monitoring</p>
+<p>Reablement Analytics, Discharge Monitoring, Patient Pathway Analysis, Integrated Care Systems, Service Capacity Planning</p>
 </div>
 
 <div class="skill-card">
 <h3>Stakeholder Engagement</h3>
-<p>Cross-functional Collaboration, Training Staff, Presenting Analytics to Non-Technical Stakeholders</p>
+<p>Cross-functional Collaboration, Training Staff, Presenting Insights to Non-Technical Stakeholders</p>
 </div>
 
 <div class="skill-card">
 <h3>Governance & Compliance</h3>
-<p>Data Confidentiality, Information Governance, Regulatory Compliance</p>
+<p>Information Governance, Data Confidentiality, Regulatory Reporting, Healthcare Data Protection</p>
 </div>
 
 </div>
@@ -259,62 +287,73 @@ Through my work with <strong>NHS-aligned reablement and discharge services</stro
 
 <div class="impact-box">
 <strong>Operational Visibility</strong><br>
-Developed dashboards that provide managers with real-time visibility into service performance, workforce activity, and care delivery metrics.
+Developed dashboards enabling managers to monitor service activity, workforce performance, and operational KPIs in real time.
 </div>
 
 <div class="impact-box">
 <strong>Discharge & Reablement Monitoring</strong><br>
-Built analytics tools that track referral response times, care delivery timelines, and reablement outcomes supporting improved discharge coordination.
+Designed analytics solutions that track referral response times, care delivery performance, and recovery outcomes for reablement services.
 </div>
 
 <div class="impact-box">
 <strong>Service Capacity Planning</strong><br>
-Enabled service managers to analyse care demand, monitor planned vs actual service hours, and optimise workforce planning.
+Enabled analysis of care demand and planned versus actual service hours supporting workforce planning.
 </div>
 
 <div class="impact-box">
 <strong>Performance & Governance Reporting</strong><br>
-Designed reporting solutions that support compliance monitoring, operational governance, and continuous service improvement.
+Built reporting tools supporting operational governance, compliance monitoring, and service improvement initiatives.
 </div>
 
 </section>
 
 <section id="projects">
 
-<h2>Projects</h2>
+<h2>Analytics Projects</h2>
 
 <div class="project-box demo">
 
-<h3>Community Care & Bridging Services Dashboard (Demo)</h3>
+<h3>Community Care & Bridging Services Analytics Dashboard</h3>
 
-<p>
+<p>This Power BI dashboard demonstrates operational insights across care delivery including client satisfaction monitoring, complaint tracking, workforce activity analysis, and revenue performance.</p>
 
-This Power BI dashboard demonstrates operational insights across care delivery including client satisfaction, complaint monitoring, workforce performance, and revenue analysis.
+<div class="case-study">
 
-</p>
+<h4>Project Case Study</h4>
+
+<p><strong>Operational Context</strong><br>
+Community care providers require operational visibility into care visits, client feedback, and workforce performance.</p>
+
+<p><strong>Data Sources</strong><br>
+Client records, care visit logs, complaints data, workforce scheduling, and service billing data.</p>
+
+<p><strong>Analytical Approach</strong><br>
+Power BI dashboards were designed to track care visit compliance, monitor complaints, evaluate staff performance, and analyse service revenue.</p>
+
+<p><strong>Operational Insights</strong><br>
+Managers can identify service delivery trends, monitor staff activity, and track client satisfaction indicators.</p>
+
+<p><strong>Service Impact</strong><br>
+Improves operational oversight and supports data-driven service management.</p>
+
+</div>
 
 <div class="screenshot-grid">
 
 <img src="screenshots/demo/care-call-compliance-client-satisfaction.png">
-
 <img src="screenshots/demo/client-complaint-analysis.png">
-
 <img src="screenshots/demo/client-data-summary.png">
-
 <img src="screenshots/demo/client-medical-analysis.png">
-
 <img src="screenshots/demo/day-to-day-performance-tracker.png">
-
 <img src="screenshots/demo/financial-analysis.png">
 
 </div>
 
-<h4>INTERACTIVE DASHBOARD</h4>
+<h4 style="font-weight:bold;text-transform:uppercase;">INTERACTIVE DASHBOARD</h4>
 
-
-<p style="font-weight:bold; text-transform:uppercase; color:#0b3d91;">
+<div class="dashboard-note">
 PLEASE FEEL FREE TO INTERACT WITH THE DASHBOARD BELOW – CLICK VISUALS, APPLY FILTERS, AND EXPLORE THE DATA.
-</p>
+</div>
 
 <iframe src="https://app.powerbi.com/view?r=eyJrIjoiOWE1ODk4MjMtMzliOS00OWZkLWIzNmEtMTkwNWNkYzc1ZGZkIiwidCI6IjgzZDFhNmMzLTM0MmYtNDkzMS1hZTE4LWFjMzZkZTlkM2ZmYSJ9"></iframe>
 
@@ -322,30 +361,39 @@ PLEASE FEEL FREE TO INTERACT WITH THE DASHBOARD BELOW – CLICK VISUALS, APPLY F
 
 <div class="project-box live">
 
-<h3>Healthcare Reablement Analytics (Live Project)</h3>
+<h3>Healthcare Reablement Analytics (NHS-Aligned Service Project)</h3>
 
-<p>
+<p>This Power BI dashboard supports operational monitoring within an NHS-aligned reablement service. Sensitive patient data has been anonymised.</p>
 
-This Power BI dashboard was developed to support operational monitoring within an <strong>NHS-aligned Reablement Service</strong>. The analytics solution tracks referral response times, monitors client recovery goals, evaluates care delivery performance, and provides visibility into service capacity.
+<div class="case-study">
 
-All screenshots shown have been anonymised to protect sensitive patient information and maintain data governance standards.
+<h4>Project Case Study</h4>
 
-</p>
+<p><strong>Operational Context</strong><br>
+Reablement services support patients transitioning from hospital discharge back to independent living.</p>
+
+<p><strong>Data Sources</strong><br>
+Referral records, care visit logs, service duration metrics, and client recovery goal tracking.</p>
+
+<p><strong>Analytical Approach</strong><br>
+Power BI dashboards track referral response times, analyse planned vs actual service hours, and monitor reablement goal completion.</p>
+
+<p><strong>Operational Insights</strong><br>
+Managers can evaluate referral responsiveness, monitor care delivery efficiency, and assess recovery progress.</p>
+
+<p><strong>Service Impact</strong><br>
+Improves discharge coordination visibility and supports operational decision-making for reablement services.</p>
+
+</div>
 
 <div class="screenshot-grid">
 
 <img src="screenshots/reablement/care-times-analysis.png">
-
 <img src="screenshots/reablement/dashboard-overview.png">
-
 <img src="screenshots/reablement/kpi-tracker.png">
-
 <img src="screenshots/reablement/reablement-data-metrics.png">
-
 <img src="screenshots/reablement/reablement-duration-analysis.png">
-
 <img src="screenshots/reablement/reablement-goals-analysis.png">
-
 <img src="screenshots/reablement/reablement-referral-response.png">
 
 </div>
@@ -359,30 +407,24 @@ All screenshots shown have been anonymised to protect sensitive patient informat
 <h2>Contact</h2>
 
 <p>
-
 LinkedIn<br>
 <a href="https://www.linkedin.com/in/kelvin-ikokwu-43b6aa230/" target="_blank">
 linkedin.com/in/kelvin-ikokwu-43b6aa230
 </a>
-
 </p>
 
 <p>
-
 Email<br>
 <a href="mailto:kelvinlucas4real2001@gmail.com">
 kelvinlucas4real2001@gmail.com
 </a>
-
 </p>
 
 <p>
-
 GitHub<br>
 <a href="https://github.com/KelvinIkokwu" target="_blank">
 github.com/KelvinIkokwu
 </a>
-
 </p>
 
 </section>
