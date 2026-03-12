@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kachi Kelvin Ikokwu | Data Analytics Portfolio</title>
+
+<!-- basicLightbox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.css">
+
 <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f5f7; color: #333; line-height: 1.6; }
     header { background: #0b3d91; color: white; padding: 50px 20px; text-align: center; }
@@ -13,31 +17,37 @@
     section { padding: 40px 20px; max-width: 1100px; margin: auto; }
     h2 { color: #0b3d91; margin-bottom: 20px; font-size: 2em; }
 
-    /* Skills Section */
+    /* Skills */
     .skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
     .skill { background: #0b3d91; color: white; padding: 8px 15px; border-radius: 25px; font-weight: bold; font-size: 0.9em; }
 
-    /* Projects Section */
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-    .project { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: transform 0.2s, box-shadow 0.2s; }
-    .project:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.25); }
-    .project h3 { margin-top: 0; color: #0b3d91; }
-    .project img { width: 100%; border-radius: 8px; margin-top: 10px; }
+    /* Project sections */
+    .project-section { padding: 20px; border-radius: 10px; margin-bottom: 40px; }
+    .project-demo { background: #e6f0ff; } /* soft blue */
+    .project-live { background: #e6ffe6; } /* soft green */
+    .project h3 { color: #0b3d91; margin-top: 0; }
 
-    /* Key Insights */
-    .key-insights { background: #e6f0ff; border-left: 5px solid #0b3d91; padding: 10px 15px; margin-top: 15px; border-radius: 5px; }
-    .key-insights ul { margin: 0; padding-left: 20px; }
+    /* Screenshot grid */
+    .screenshot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
+    .screenshot-grid img:first-child { grid-column: span 2; } /* first screenshot full width */
+    .screenshot-grid img { width: 100%; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+    .screenshot-grid img:hover { transform: scale(1.03); }
 
     /* Power BI iframe */
     .iframe-container { position: relative; width: 100%; padding-bottom: 56.25%; margin-top: 20px; }
     .iframe-container iframe { position: absolute; width: 100%; height: 100%; border: none; border-radius: 10px; }
+
+    /* Key insights */
+    .key-insights { background: #ffffff; border-left: 5px solid #0b3d91; padding: 10px 15px; margin-top: 15px; border-radius: 5px; }
+    .key-insights ul { margin: 0; padding-left: 20px; }
 
     a { color: #0b3d91; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     footer { background: #0b3d91; color: white; text-align: center; padding: 20px; margin-top: 50px; font-size: 0.9em; }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
+        .screenshot-grid { grid-template-columns: 1fr; }
         header h1 { font-size: 2em; }
         section { padding: 30px 15px; }
     }
@@ -50,7 +60,7 @@
     <p>Data Analytics & Power BI Portfolio – Healthcare & Community Care Insights</p>
 </header>
 
-<!-- BIO SECTION -->
+<!-- BIO -->
 <section id="bio">
     <h2>About Me</h2>
     <p>
@@ -61,7 +71,7 @@
     </p>
 </section>
 
-<!-- SKILLS SECTION -->
+<!-- SKILLS -->
 <section id="skills">
     <h2>Skills</h2>
     <div class="skills">
@@ -74,22 +84,24 @@
     </div>
 </section>
 
-<!-- PROJECTS SECTION -->
+<!-- PROJECTS -->
+
 <section id="projects">
     <h2>Projects</h2>
 
-    <!-- Project 1: Demo Community Care Dashboard -->
-    <div class="project">
+    <!-- DEMO DASHBOARD -->
+    <div class="project-section project-demo">
         <h3>Community Care & Bridging Services Dashboard (Demo)</h3>
         <p>This Power BI dashboard demonstrates insights into care capacity, client satisfaction, complaints monitoring, revenue performance, and workforce analytics.</p>
 
-        <h4>Screenshots Preview</h4>
-        <img src="screenshots/demo/care-call-compliance-client-satisfaction.png" alt="Care Call Compliance & Client Satisfaction">
-        <img src="screenshots/demo/client-complaint-analysis.png" alt="Client Complaint Analysis">
-        <img src="screenshots/demo/client-data-summary.png" alt="Client Data Summary">
-        <img src="screenshots/demo/client-medical-analysis.png" alt="Client Medical Analysis">
-        <img src="screenshots/demo/day-to-day-performance-tracker.png" alt="Day to Day Performance Tracker">
-        <img src="screenshots/demo/financial-analysis.png" alt="Financial Analysis">
+        <div class="screenshot-grid">
+            <img src="screenshots/demo/care-call-compliance-client-satisfaction.png" alt="Care Call Compliance & Client Satisfaction">
+            <img src="screenshots/demo/client-complaint-analysis.png" alt="Client Complaint Analysis">
+            <img src="screenshots/demo/client-data-summary.png" alt="Client Data Summary">
+            <img src="screenshots/demo/client-medical-analysis.png" alt="Client Medical Analysis">
+            <img src="screenshots/demo/day-to-day-performance-tracker.png" alt="Day to Day Performance Tracker">
+            <img src="screenshots/demo/financial-analysis.png" alt="Financial Analysis">
+        </div>
 
         <h4>Interactive Dashboard</h4>
         <div class="iframe-container">
@@ -108,19 +120,20 @@
         </div>
     </div>
 
-    <!-- Project 2: Live Healthcare Reablement Analytics -->
-    <div class="project">
+    <!-- LIVE REABLEMENT DASHBOARD -->
+    <div class="project-section project-live">
         <h3>Healthcare Reablement Analytics (Live Project)</h3>
         <p>This live dashboard monitors reablement service performance, tracks client goals, measures care duration and service hours, and analyzes referral response times. Sensitive client data has been blurred in screenshots for privacy.</p>
 
-        <h4>Screenshots Preview</h4>
-        <img src="screenshots/reablement/care-times-analysis.png" alt="Care Times Analysis per Service User">
-        <img src="screenshots/reablement/dashboard-overview.png" alt="Dashboard Overview">
-        <img src="screenshots/reablement/kpi-tracker.png" alt="KPI Tracker">
-        <img src="screenshots/reablement/reablement-data-metrics.png" alt="Reablement Data Metrics">
-        <img src="screenshots/reablement/reablement-duration-analysis.png" alt="Reablement Duration Analysis">
-        <img src="screenshots/reablement/reablement-goals-analysis.png" alt="Reablement Goals Analysis">
-        <img src="screenshots/reablement/reablement-referral-response.png" alt="Reablement Referral Response Rating">
+        <div class="screenshot-grid">
+            <img src="screenshots/reablement/care-times-analysis.png" alt="Care Times Analysis per Service User">
+            <img src="screenshots/reablement/dashboard-overview.png" alt="Dashboard Overview">
+            <img src="screenshots/reablement/kpi-tracker.png" alt="KPI Tracker">
+            <img src="screenshots/reablement/reablement-data-metrics.png" alt="Reablement Data Metrics">
+            <img src="screenshots/reablement/reablement-duration-analysis.png" alt="Reablement Duration Analysis">
+            <img src="screenshots/reablement/reablement-goals-analysis.png" alt="Reablement Goals Analysis">
+            <img src="screenshots/reablement/reablement-referral-response.png" alt="Reablement Referral Response Rating">
+        </div>
 
         <div class="key-insights">
             <h4>Key Insights</h4>
@@ -136,7 +149,7 @@
 
 </section>
 
-<!-- CONTACT SECTION -->
+<!-- CONTACT -->
 <section id="contact">
     <h2>Contact</h2>
     <p>
@@ -149,6 +162,17 @@
 <footer>
     &copy; 2026 Kachi Kelvin Ikokwu – Data Analytics Portfolio
 </footer>
+
+<!-- basicLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.js"></script>
+<script>
+    // Attach lightbox to all images in screenshot grids
+    document.querySelectorAll('.screenshot-grid img').forEach(img => {
+        img.addEventListener('click', () => {
+            basicLightbox.create(`<img src="${img.src}" style="width:100%;height:auto;">`).show()
+        })
+    });
+</script>
 
 </body>
 </html>
