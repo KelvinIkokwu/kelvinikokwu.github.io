@@ -60,17 +60,6 @@ font-size:1.2em;
 margin-top:10px;
 }
 
-.header-button{
-background:#ff9800; 
-color:white; 
-padding:12px 25px; 
-border-radius:6px; 
-text-decoration:none; 
-font-weight:bold; 
-display:inline-block; 
-margin-top:15px;
-}
-
 /* GENERAL SECTIONS */
 
 section{
@@ -122,12 +111,21 @@ border-radius:12px;
 margin-bottom:50px;
 }
 
+/* Colour-coded project boxes */
+
 .demo{
-background:#e8f0ff;
+background:#e8f0ff; /* light blue for demo */
 }
 
 .live{
-background:#e9ffe9;
+background:#e9ffe9; /* light green for live project */
+}
+
+.skills-section{
+background:#fff3e6; /* light orange for skills tile */
+padding:40px 25px;
+border-radius:12px;
+margin-bottom:50px;
 }
 
 /* CASE STUDY */
@@ -233,13 +231,6 @@ color:#0b3d91;
 
 <p>Transforming healthcare and operational data into actionable insights that support NHS-aligned service delivery.</p>
 
-<!-- Downloadable CV button -->
-<p>
-<a href="Kachi_Kelvin_Ikokwu_NHS_Data_Analyst_CV.pdf" download class="header-button">
-Download My NHS Data Analyst CV
-</a>
-</p>
-
 </header>
 
 <section id="about">
@@ -299,8 +290,7 @@ Through my work with <strong>NHS-aligned reablement and discharge services</stro
 
 </section>
 
-<!-- Mini skills tile section -->
-<section id="skills-visual">
+<section class="skills-section" id="skills-visual">
 <h2>Skills Visualisation</h2>
 <p>A snapshot of my core analytics and NHS-aligned capabilities.</p>
 <img src="screenshots/skills-tile.png" onclick="basicLightbox.create('<img src=\'screenshots/skills-tile.png\' style=\'width:100%\'>').show()">
@@ -364,14 +354,12 @@ Improves operational oversight and supports data-driven service management.</p>
 </div>
 
 <div class="screenshot-grid">
-
 <img src="screenshots/demo/care-call-compliance-client-satisfaction.png">
 <img src="screenshots/demo/client-complaint-analysis.png">
 <img src="screenshots/demo/client-data-summary.png">
 <img src="screenshots/demo/client-medical-analysis.png">
 <img src="screenshots/demo/day-to-day-performance-tracker.png">
 <img src="screenshots/demo/financial-analysis.png">
-
 </div>
 
 <h4 style="font-weight:bold;text-transform:uppercase;">INTERACTIVE DASHBOARD</h4>
@@ -412,7 +400,6 @@ Improves discharge coordination visibility and supports operational decision-mak
 </div>
 
 <div class="screenshot-grid">
-
 <img src="screenshots/reablement/care-times-analysis.png">
 <img src="screenshots/reablement/dashboard-overview.png">
 <img src="screenshots/reablement/kpi-tracker.png">
@@ -420,7 +407,6 @@ Improves discharge coordination visibility and supports operational decision-mak
 <img src="screenshots/reablement/reablement-duration-analysis.png">
 <img src="screenshots/reablement/reablement-goals-analysis.png">
 <img src="screenshots/reablement/reablement-referral-response.png">
-
 </div>
 
 </div>
